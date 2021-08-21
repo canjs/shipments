@@ -1,0 +1,29 @@
+{
+  "name": "shipments-app",
+  "version": "1.0.0",
+  "description": "example canjs app",
+  "main": "shipments-app.js",
+  "scripts": {
+    "start": "http-server -c-1 .",
+    "build": "steal-tools --bundle-steal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canjs/shipments.git"
+  },
+  "keywords": [
+    "canjs"
+  ],
+  "author": "Bitovi LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canjs/shipments/issues"
+  },
+  "homepage": "https://github.com/canjs/shipments#readme",
+  "dependencies": {
+    "can": "^6.6.1",
+    "steal": "^2.2.4",
+    "steal-mocha": "^2.0.1",
+    "steal-tools": "^2.2.6"
+  }
+}
