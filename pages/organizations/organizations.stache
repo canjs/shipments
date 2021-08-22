@@ -1,0 +1,62 @@
+Sort By: <select value:bind="this.sort">
+	<option value="">none</option>
+	<option value="name">name</option>
+	<option value="createdAt">createdAt</option>
+</select>
+
+Show: <select value:bind="this.egressFilter">
+	<option value="">All</option>
+	<option value="origins">Only Origins</option>
+	<option value="destinations">Only Destinations</option>
+</select>
+
+Results <select value:bind="this.count">
+	<option value="">All</option>
+	<option value="10">10</option>
+	<option value="20">20</option>
+</select>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Origin</th><th>Destination</th>
+		<th>Actions</th>
+	</tr>
+	{{# if(this.organizationsPromise.isResolved) }}
+		{{# for(organization of this.organizationsPromise.value) }}
+			<tr>
+				<td>{{organization.name}}</td>
+				<td>
+					{{#if(organization.isOrigin)}}
+						<span class="dot-filled"></span>
+					{{else}}
+						<span class="dot-empty"></span>
+					{{/if}}
+				</td>
+				<td>
+					{{#if(organization.isDestination)}}
+						<span class="dot-filled"></span>
+					{{else}}
+						<span class="dot-empty"></span>
+					{{/if}}
+				</td>
+				<td>
+					<button on:click="this.edit(organization)">Edit</button> <button>Delete</button>
+				</td>
+			</tr>
+			{{# if( this.isEditing(organization) )}}
+				<tr>
+					<td colspan="4">
+						<organization-edit
+							organization:from="this._editingOrganization"
+							onSaved:from="this.cancelEdit"
+						/>
+					</td>
+				</tr>
+			{{/ if }}
+		{{/ for }}
+	{{/ if }}
+	{{# if(this.organizationsPromise.isPending) }}
+		<tr><td>Loading</td></tr>
+	{{/ if }}
+</table>

@@ -20,9 +20,17 @@
     "url": "https://github.com/canjs/shipments/issues"
   },
   "homepage": "https://github.com/canjs/shipments#readme",
+  "steal": {
+    "plugins": [
+      "steal-css",
+      "steal-less"
+    ]
+  },
   "dependencies": {
     "can": "^6.6.1",
     "steal": "^2.2.4",
+    "steal-css": "^1.3.2",
+    "steal-less": "^1.3.4",
     "steal-mocha": "^2.0.1",
     "steal-tools": "^2.2.6"
   }

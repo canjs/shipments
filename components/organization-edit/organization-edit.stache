@@ -1,0 +1,21 @@
+{{#if this.organization}}
+	<form on:submit="this.save(scope.event)">
+		<p>
+			<input value:from="this.organization.name" this:to="this.nameElement"/>
+		</p>
+		<p>
+			isOrigin:
+			<input type="checkbox"
+				checked:from="this.organization.isOrigin"
+				checked:to="this.isOriginFormValue"/>
+		</p>
+		<p>
+			isDestination:
+			<input type="checkbox"
+				checked:from="this.organization.isDestination"
+				checked:to="this.isDestinationFormValue"/>
+		</p>
+
+		<button>Save</button>
+	</form>
+{{/if}}

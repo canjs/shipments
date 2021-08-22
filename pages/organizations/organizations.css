@@ -1,0 +1,15 @@
+page-organizations .dot-filled {
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+page-organizations .dot-empty {
+  height: 15px;
+  width: 15px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+}
