@@ -1,11 +1,10 @@
 import {fixture} from "can";
 import Organization from "../organization";
 
-
 export function mockOrganizationsService(){
 	console.log("called");
-	var terms = ["fast","quick","super","great","insta","wonder","amaze","awesome","neat"],
-		subjects = ["dog","laundry","diapers","clothes","car","windows","carpet","taxes","food","gas","trash"],
+	var terms = ["Fast","Quick","Super","Great","Insta","Wonder","Amaze","Awesome","Neat"],
+		subjects = ["Dog","Laundry","Diapers","Clothes","Car","Windows","Carpet","Taxes","Food","Gas","Trash"],
 		types = ["CO","LLC","Partners"];
 
 	var dayInMS = 24*60*60*1000;
@@ -23,4 +22,5 @@ export function mockOrganizationsService(){
 
 	fixture("/api/organizations/{id}", organizationStore);
 	fixture.delay = 100;
+	return organizationStore;
 }

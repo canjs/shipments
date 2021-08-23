@@ -1,0 +1,38 @@
+Sort By: <select value:bind="this.sort">
+	<option value="">none</option>
+	<option value="name">name</option>
+	<option value="departureDate">departureDate</option>
+	<option value="arrivalDate">arrivalDate</option>
+</select>
+
+Filter Origins: {{#if this.organizations}}
+	<select value:bind="this.originOrganizationId">
+		<option value="">All</option>
+		{{# for(shipment of this.organizations.origins) }}
+			<option value="{{shipment.id}}">{{shipment.name}}</option>
+		{{/for}}
+	</select>
+{{/if}}
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Origin</th><th>Departure Time</th>
+		<th>Destination</th><th>Arrival Time</th>
+		<th>Actions</th>
+	</tr>
+	{{# if(this.shipmentsPromise.isResolved) }}
+		{{# for(shipment of this.shipmentsPromise.value) }}
+			<tr>
+				<td>{{shipment.name}}</td>
+				<td>{{shipment.originOrganization.name}}</td>
+				<td>{{this.formatDate( shipment.departureDate ) }}</td>
+				<td>{{shipment.destinationOrganization.name}}</td>
+				<td>{{this.formatDate( shipment.arrivalDate )}}</td>
+			</tr>
+		{{/ for }}
+	{{/ if }}
+	{{# if(this.shipmentsPromise.isPending) }}
+		<tr><td>Loading</td></tr>
+	{{/ if }}
+</table>

@@ -1,4 +1,6 @@
 import { Component, DefineMap, route, stacheRouteHelpers, value } from "can";
+import {mockOrganizationsService} from "~/models/fixtures/organizations";
+mockOrganizationsService();
 
 Component.extend({
     tag: "shipments-app",
