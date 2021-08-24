@@ -2,7 +2,6 @@ import {fixture} from "can";
 import Organization from "../organization";
 
 export function mockOrganizationsService(){
-	console.log("called");
 	var terms = ["Fast","Quick","Super","Great","Insta","Wonder","Amaze","Awesome","Neat"],
 		subjects = ["Dog","Laundry","Diapers","Clothes","Car","Windows","Carpet","Taxes","Food","Gas","Trash"],
 		types = ["CO","LLC","Partners"];

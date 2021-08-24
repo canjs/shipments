@@ -1,0 +1,7 @@
+{{#if this.shipment}}
+	<form on:submit="this.save(scope.event)">
+		Edit A Shipment {{this.shipment.id}}!
+
+		<button>Save</button>
+	</form>
+{{/if}}

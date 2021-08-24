@@ -29,6 +29,10 @@ Filter Origins: {{#if this.organizations}}
 				<td>{{this.formatDate( shipment.departureDate ) }}</td>
 				<td>{{shipment.destinationOrganization.name}}</td>
 				<td>{{this.formatDate( shipment.arrivalDate )}}</td>
+				<td>
+					<button on:click="this.edit(shipment)">Edit</button>
+					<button>Delete</button>
+				</td>
 			</tr>
 		{{/ for }}
 	{{/ if }}
