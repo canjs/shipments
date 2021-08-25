@@ -43,7 +43,8 @@ const BitModal = Component.extend({
 			});
 		},
 		removeLastComponent(){
-			this.components.pop();
+			const removed = this.components.pop();
+			removed.viewModel.onCancelled();
 		}
 	}
 });

@@ -1,7 +1,17 @@
 {{#if this.shipment}}
 	<form on:submit="this.save(scope.event)">
-		Edit A Shipment {{this.shipment.id}}!
+		<p>
+			<input value:from="this.shipment.name" value:to="this.shipmentName"/>
+		</p>
+		<p>
+			Origin:
+			<select value:bind="this.shipment.originOrganizationId">
+				{{# for(organization of this.organizations.origins) }}
+					<option value="{{organization.id}}">{{organization.name}}</option>
+				{{/for}}
+			</select>
+		</p>
 
-		<button>Save</button>
+		<button>Save</button><button>Cancel</button>
 	</form>
 {{/if}}

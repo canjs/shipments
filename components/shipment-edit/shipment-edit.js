@@ -7,15 +7,11 @@ const ShipmentEdit = Component.extend({
 	view: shipmentEditStache,
 	ViewModel: {
 		shipment: type.maybe(Shipment),
+		shipmentName: type.check(String),
 		onSaved: type.check(Function),
+		organizations: type.Any,
 		save(event){
 			event.preventDefault();
-
-			this.shipment.assign({
-				name: this.nameElement.value,
-				isOrigin: this.isOriginFormValue,
-				isDestination: this.isDestinationFormValue
-			})
 			this.shipment.save( ()=> {
 				this.onSaved();
 			})

@@ -48,7 +48,7 @@ const PageShipments = Component.extend({
 
 					const destinations = shipments.map( shipment => shipment.destinationOrganization );
 					const origins = shipments.map( shipment => shipment.originOrganization );
-
+					
 					resolve({
 						destinations: Array.from( new Set(destinations) ),
 						origins: Array.from( new Set(origins) ),
@@ -74,7 +74,9 @@ const PageShipments = Component.extend({
 				return new ShipmentEdit({
 					viewModel: {
 						shipment: this._editingShipment,
-						onSaved: this.cancelEdit.bind(this)
+						organizations: this.organizations,
+						onSaved: this.cancelEdit.bind(this),
+						onCancelled: this.cancelEdit.bind(this)
 					}
 				})
 			}

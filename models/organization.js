@@ -13,10 +13,7 @@ const Organization = DefineMap.extend("Organization",{
 	isDestination: { type: "boolean", default: false },
 	isOrigin: { type: "boolean", default: false },
 	name: "string",
-	createdAt: {type: "date", Default: Date},
-	preventSave(){
-		return !this.name || this.isSaving() || this.isDestroying();
-	}
+	createdAt: {type: "date", Default: Date}
 });
 
 Organization.List = DefineList.extend("OrganizationList",{
