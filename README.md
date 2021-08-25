@@ -7,5 +7,5 @@ cd shipments
 npm i
 npm i -g http-server
 
-http-server -c-1
+http-server -c-1 -o
 ```
