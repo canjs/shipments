@@ -2,6 +2,9 @@ import { Component, DefineMap, route, stacheRouteHelpers, value } from "can";
 import {mockOrganizationsService} from "~/models/fixtures/organizations";
 mockOrganizationsService();
 
+import {mockShipmentsService} from "~/models/fixtures/shipments";
+mockShipmentsService();
+
 Component.extend({
     tag: "shipments-app",
     view: `
@@ -15,7 +18,6 @@ Component.extend({
                 const observableRouteData = new DefineMap();
                 route.data = observableRouteData;
                 route.register("{page}", { page: "home" });
-                route.register("tasks/{taskId}", { page: "tasks" });
                 route.start();
                 return observableRouteData;
             }

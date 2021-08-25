@@ -1,13 +1,5 @@
 import {realtimeRestModel, DefineMap, DefineList, fixture} from "can";
 
-
-const Address = DefineMap.extend("Address", {
-	street: "string",
-	city: "string",
-	postalCode: "string",
-	country: "string"
-});
-
 const Organization = DefineMap.extend("Organization",{
 	id: { type: "number", identity: true },
 	isDestination: { type: "boolean", default: false },

@@ -1,8 +1,9 @@
 
 <script src="../../node_modules/steal/steal.js">
 import {mockOrganizationsService} from "~/models/fixtures/organizations";
-import "~/pages/organizations/";
 mockOrganizationsService();
+
+import "~/pages/organizations/";
 
 
 document.body.append(document.createElement("page-organizations"))

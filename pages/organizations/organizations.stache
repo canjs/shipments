@@ -41,7 +41,8 @@ Results <select value:bind="this.count">
 					{{/if}}
 				</td>
 				<td>
-					<button on:click="this.edit(organization)">Edit</button> <button>Delete</button>
+					<button on:click="this.edit(organization)">Edit</button>
+					<button on:click="organization.destroy()">Delete</button>
 				</td>
 			</tr>
 			{{# if( this.isEditing(organization) )}}
