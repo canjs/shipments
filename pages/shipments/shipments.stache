@@ -1,18 +1,17 @@
-Sort By: <select value:bind="this.sort">
+Sort By: <select>
 	<option value="">none</option>
 	<option value="name">name</option>
 	<option value="departureDate">departureDate</option>
 	<option value="arrivalDate">arrivalDate</option>
 </select>
 
-Filter Origins: {{#if this.organizations}}
-	<select value:bind="this.originOrganizationId">
+Filter Origins:
+	<select>
 		<option value="">All</option>
-		{{# for(shipment of this.organizations.origins) }}
-			<option value="{{shipment.id}}">{{shipment.name}}</option>
-		{{/for}}
+
+			<option value="123">ABC</option>
 	</select>
-{{/if}}
+
 
 <table>
 	<tr>
@@ -21,22 +20,18 @@ Filter Origins: {{#if this.organizations}}
 		<th>Destination</th><th>Arrival Time</th>
 		<th>Actions</th>
 	</tr>
-	{{# if(this.shipmentsPromise.isResolved) }}
-		{{# for(shipment of this.shipmentsPromise.value) }}
 			<tr>
-				<td>{{shipment.name}}</td>
-				<td>{{shipment.originOrganization.name}}</td>
-				<td>{{this.formatDate( shipment.departureDate ) }}</td>
-				<td>{{shipment.destinationOrganization.name}}</td>
-				<td>{{this.formatDate( shipment.arrivalDate )}}</td>
+				<td>shipment.name</td>
+				<td>shipment.originOrganization.name</td>
+				<td>shipment.departureDate</td>
+				<td>shipment.destinationOrganization.name</td>
+				<td>shipment.arrivalDate</td>
 				<td>
-					<button on:click="this.edit(shipment)">Edit</button>
+					<button>Edit</button>
 					<button>Delete</button>
 				</td>
 			</tr>
-		{{/ for }}
-	{{/ if }}
-	{{# if(this.shipmentsPromise.isPending) }}
+
 		<tr><td>Loading</td></tr>
-	{{/ if }}
+
 </table>
