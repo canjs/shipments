@@ -9,3 +9,5 @@ npm i -g http-server
 
 http-server -c-1 -o
 ```
+
+Open: http://127.0.0.1:8080/development.html
