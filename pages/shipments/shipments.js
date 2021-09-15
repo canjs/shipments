@@ -12,7 +12,19 @@ const formater = new Intl.DateTimeFormat('default', {
 const PageShipments = Component.extend({
 	tag: "page-shipments",
 	view: shipmentsStache,
-	ViewModel: {}
+	ViewModel: {
+		sort: "string",
+		get shipmentsPromise() {
+			const query = {};
+			if(this.sort) {
+				query.sort = this.sort;
+			}
+			return Shipment.getList(query);
+		},
+		formatDate(date) {
+			return formater.format(date);
+		}
+	}
 
 });
 

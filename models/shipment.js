@@ -10,6 +10,12 @@ const OrgHydateType = {
 window.Organization = Organization;
 
 const Shipment = DefineMap.extend("Shipment",{
+	id: {type: "number", identiy: true},
+	name: "string",
+	destinationOrganizationId: "number",
+	originOrganizationId: "number",
+	departureDate:"date",
+	arrivalDate:  "date",
 	destinationOrganization: OrgHydateType,
 	originOrganization: OrgHydateType,
 });

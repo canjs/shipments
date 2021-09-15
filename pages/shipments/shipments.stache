@@ -1,4 +1,4 @@
-Sort By: <select>
+Sort By: <select value:bind="this.sort">
 	<option value="">none</option>
 	<option value="name">name</option>
 	<option value="departureDate">departureDate</option>
@@ -20,18 +20,23 @@ Filter Origins:
 		<th>Destination</th><th>Arrival Time</th>
 		<th>Actions</th>
 	</tr>
+	{{ #if(this.shipmentsPromise.isResolved) }}
+		{{# for(shipment of this.shipmentsPromise.value) }}
 			<tr>
-				<td>shipment.name</td>
-				<td>shipment.originOrganization.name</td>
-				<td>shipment.departureDate</td>
-				<td>shipment.destinationOrganization.name</td>
-				<td>shipment.arrivalDate</td>
+				<td>{{shipment.name}}</td>
+				<td>{{shipment.originOrganizationId}}</td>
+				<td>{{ this.formatDate( shipment.departureDate ) }}</td>
+				<td>{{  shipment.destinationOrganizationId }}</td>
+				<td>{{ this.formatDate( shipment.arrivalDate ) }}</td>
 				<td>
 					<button>Edit</button>
-					<button>Delete</button>
+					<button on:click="shipment.destroy()" >Delete</button>
 				</td>
 			</tr>
-
+		{{/for }}
+	{{/if}}
+	{{# if( this.shipmentsPromise.isPending ) }}
 		<tr><td>Loading</td></tr>
+	{{/}}
 
 </table>
