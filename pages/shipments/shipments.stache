@@ -24,7 +24,7 @@ Filter Origins: {{#if this.organizations}}
 	{{# if(this.shipmentsPromise.isResolved) }}
 		{{# for(shipment of this.shipmentsPromise.value) }}
 			<tr>
-				<td>{{shipment.name}}</td>
+				<td class='shipment-name'>{{shipment.name}}</td>
 				<td>{{shipment.originOrganization.name}}</td>
 				<td>{{this.formatDate( shipment.departureDate ) }}</td>
 				<td>{{shipment.destinationOrganization.name}}</td>
@@ -37,6 +37,6 @@ Filter Origins: {{#if this.organizations}}
 		{{/ for }}
 	{{/ if }}
 	{{# if(this.shipmentsPromise.isPending) }}
-		<tr><td>Loading</td></tr>
+		<tr class='pending'><td>Loading</td></tr>
 	{{/ if }}
 </table>
