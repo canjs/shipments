@@ -48,3 +48,9 @@ if(include.includes("originOrganization")) {
 ### Add filtering by originOrganizationId
 
 #### What you need to do
+
+
+1. Create an `organizationsPromise` getter that returns a promise of all orgs.
+2. Create a `originOrganizationsPromise` that returns just the orgs can can be an origin.
+3. Update the viewModel to have a `originOrganizationId` filter.
+4. Wire it up in the template!
