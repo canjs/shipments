@@ -2,7 +2,8 @@ import { Component, type } from "can";
 import shipmentsStache from "./shipments.stache";
 import Shipment from "~/models/shipment";
 import ShipmentEdit from "~/components/shipment-edit/";
-import BitModal from "~/components/bit-modal/"
+import BitModal from "~/components/bit-modal/";
+import Organization from "~/models/organization";
 
 const formater = new Intl.DateTimeFormat('default', {
 	year: 'numeric', month: 'numeric', day: 'numeric',
@@ -17,41 +18,27 @@ const PageShipments = Component.extend({
 		originOrganizationId: "string",
 
 		// this is needed for filtering
-		allShipmentsPromise: {
-			default() {
-				return Shipment.getList({include: ["destinationOrganization","originOrganization"]});
-			}
-		},
 		shipmentsPromise: {
 			get(){
-				let requestingEverything = true;
 				var query = {filter: { }, include: ["destinationOrganization","originOrganization"]};
 				if(this.sort) {
-					requestingEverything = false;
 					query.sort =  this.sort;
 				}
 				if(this.originOrganizationId) {
-					requestingEverything = false;
 					query.filter.originOrganizationId = parseInt( this.originOrganizationId, 10);
 				}
-				if(requestingEverything) {
-					return this.allShipmentsPromise;
-				} else {
-					return Shipment.getList(query);
-				}
-
+				return Shipment.getList(query);
 			}
 		},
 		organizations: {
-			value({listenTo, resolve, stopListening}){
-				this.allShipmentsPromise.then((shipments) => {
-
-					const destinations = shipments.map( shipment => shipment.destinationOrganization );
-					const origins = shipments.map( shipment => shipment.originOrganization );
+			value({resolve}){
+				Organization.findAll().then( (organizations)=> {
+					const destinations = organizations.filter( org => org.isDestination );
+					const origins = organizations.filter( org => org.isOrigin );
 					
 					resolve({
-						destinations: Array.from( new Set(destinations) ),
-						origins: Array.from( new Set(origins) ),
+						destinations: destinations,
+						origins: origins,
 					});
 				});
 			}
