@@ -30,18 +30,13 @@ const PageShipments = Component.extend({
 				return Shipment.getList(query);
 			}
 		},
-		organizations: {
-			value({resolve}){
-				Organization.findAll().then( (organizations)=> {
-					const destinations = organizations.filter( org => org.isDestination );
-					const origins = organizations.filter( org => org.isOrigin );
-					
-					resolve({
-						destinations: destinations,
-						origins: origins,
-					});
-				});
-			}
+		get organizationsPromise(){
+			return Organization.findAll();
+		},
+		get originOrganizationsPromise(){
+			return this.organizationsPromise.then( (organizations)=> {
+				return organizations.filter( org => org.isOrigin )
+			})
 		},
 		formatDate(date) {
 			return formater.format(date);

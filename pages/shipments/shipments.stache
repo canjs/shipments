@@ -5,11 +5,11 @@ Sort By: <select value:bind="this.sort">
 	<option value="arrivalDate">arrivalDate</option>
 </select>
 
-Filter Origins: {{#if this.organizations}}
+Filter Origins: {{#if this.originOrganizationsPromise.isResolved}}
 	<select value:bind="this.originOrganizationId">
 		<option value="">All</option>
-		{{# for(shipment of this.organizations.origins) }}
-			<option value="{{shipment.id}}">{{shipment.name}}</option>
+		{{# for(organization of this.originOrganizationsPromise.value) }}
+			<option value="{{organization.id}}">{{organization.name}}</option>
 		{{/for}}
 	</select>
 {{/if}}
