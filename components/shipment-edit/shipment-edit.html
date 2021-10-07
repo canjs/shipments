@@ -1,0 +1,33 @@
+<script src="../../node_modules/steal/steal.js">
+import {mockShipmentsService} from "~/models/fixtures/shipments";
+import ShipmentEdit from "~/components/shipment-edit/";
+import Shipment from "~/models/shipment";
+import Organization from "~/models/organization";
+
+mockShipmentsService();
+
+
+Promise.all([
+	Organization.getList(),
+	Shipment.get(1)
+]).then(([organizations, shipment])=> {
+
+	shipment.on("originOrganizationId", ({value})=> {
+		console.log("originOrganizationId", value);
+	});
+
+	const shipmentEdit = new ShipmentEdit({
+		viewModel: {
+			shipment,
+			organizations,
+			onSaved: ()=> {
+				console.log("Saved!")
+			}
+		}
+	})
+	document.body.append(shipmentEdit.element)
+});
+
+
+
+</script>

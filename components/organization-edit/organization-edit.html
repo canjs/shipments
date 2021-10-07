@@ -7,6 +7,7 @@ mockOrganizationsService();
 
 
 Organization.get(1).then( (organization)=> {
+
 	const organizationEdit = new OrganizationEdit({
 		viewModel: {
 			organization,
@@ -14,7 +15,7 @@ Organization.get(1).then( (organization)=> {
 				console.log("Saved!")
 			}
 		}
-	})
+	});
 	document.body.append(organizationEdit.element)
 });
 

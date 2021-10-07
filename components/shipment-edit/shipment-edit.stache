@@ -5,8 +5,9 @@
 		</p>
 		<p>
 			Origin:
-			<select value:bind="this.shipment.originOrganizationId">
-				{{# for(organization of this.organizations.origins) }}
+			<select value:from="this.shipment.originOrganizationId"
+					value:to="this.shipmentOriginOrganizationId">
+				{{# for(organization of this.organizations) }}
 					<option value="{{organization.id}}">{{organization.name}}</option>
 				{{/for}}
 			</select>

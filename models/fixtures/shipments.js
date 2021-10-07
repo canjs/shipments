@@ -63,6 +63,6 @@ export function mockShipmentsService(){
 		return response;
 	});
 
-	fixture.delay = 5000;
+	fixture.delay = 1000;
 	return shipmentsStore;
 }
