@@ -3,7 +3,7 @@ import Organization from "./organization";
 
 const OrgHydateType = {
 	type: function(value){
-		return //??
+		return Organization.connection.hydrateInstance(value);
 	},
 	serialize: false
 };

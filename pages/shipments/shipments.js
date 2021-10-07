@@ -14,12 +14,27 @@ const PageShipments = Component.extend({
 	view: shipmentsStache,
 	ViewModel: {
 		sort: "string",
+		originOrganizationId: "string",
 		get shipmentsPromise() {
-			const query = {};
+			const query = {
+				filter: {},
+				include: ["destinationOrganization", "originOrganization"]
+			};
 			if(this.sort) {
 				query.sort = this.sort;
 			}
+			if(this.originOrganizationId) {
+				query.filter.originOrganizationId = this.originOrganizationId;
+			}
 			return Shipment.getList(query);
+		},
+		get organizationsPromise(){
+			return Organization.findAll()
+		},
+		get originOrganizationsPromise(){
+			return this.organizationsPromise.then( (orgs)=>{
+				return orgs.filter( (org)=> org.isOrigin )
+			})
 		},
 		formatDate(date) {
 			return formater.format(date);

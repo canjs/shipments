@@ -5,12 +5,17 @@ Sort By: <select value:bind="this.sort">
 	<option value="arrivalDate">arrivalDate</option>
 </select>
 
-Filter Origins:
-	<select>
-		<option value="">All</option>
 
-			<option value="123">ABC</option>
-	</select>
+
+Filter Origins:
+<select value:bind="this.originOrganizationId"
+	disabled:from="not(this.originOrganizationsPromise.isResolved) ">
+	<option value="">All</option>
+	{{# for(org of this.originOrganizationsPromise.value )}}
+		<option value:from="org.id">{{org.name}}</option>
+	{{/ for}}
+</select>
+
 
 
 <table>
@@ -24,9 +29,10 @@ Filter Origins:
 		{{# for(shipment of this.shipmentsPromise.value) }}
 			<tr>
 				<td class='shipment-name'>{{shipment.name}}</td>
-				<td>{{shipment.originOrganizationId}}</td>
+				<td>{{shipment.originOrganization.name}}</td>
+				{{ console.log("org",shipment.originOrganization) }}
 				<td>{{ this.formatDate( shipment.departureDate ) }}</td>
-				<td>{{  shipment.destinationOrganizationId }}</td>
+				<td>{{  shipment.destinationOrganization.name }}</td>
 				<td>{{ this.formatDate( shipment.arrivalDate ) }}</td>
 				<td>
 					<button>Edit</button>
