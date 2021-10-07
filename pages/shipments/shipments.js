@@ -33,6 +33,11 @@ const PageShipments = Component.extend({
 		get organizationsPromise(){
 			return Organization.findAll();
 		},
+		organizations: {
+			get(lastSetValue, resolve){
+				this.organizationsPromise.then(resolve)
+			}
+		},
 		get originOrganizationsPromise(){
 			return this.organizationsPromise.then( (organizations)=> {
 				return organizations.filter( org => org.isOrigin )
