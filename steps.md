@@ -61,3 +61,14 @@ if(include.includes("originOrganization")) {
 2. Create a `originOrganizationsPromise` that returns just the orgs can can be an origin.
 3. Update the viewModel to have a `originOrganizationId` filter.
 4. Wire it up in the template!
+
+## Part 5
+
+### Add demo page to shipments-edit
+
+
+
+### Add demo page to bit-modal
+
+
+### Wire up the modal 
