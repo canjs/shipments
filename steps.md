@@ -66,9 +66,17 @@ if(include.includes("originOrganization")) {
 
 ### Add demo page to shipments-edit
 
+### Fix it!
 
+- It doesn't update the name
+- It updates the origin org immediately instead of upon save
+
+(possibly write shipments-edit).
 
 ### Add demo page to bit-modal
 
+### Add an "isEditing" state and className
 
-### Wire up the modal 
+## Part 6
+
+### Wire up the modal
