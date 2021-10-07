@@ -1,0 +1,23 @@
+<script src="../../node_modules/steal/steal.js">
+import {mockOrganizationsService} from "~/models/fixtures/organizations";
+import OrganizationEdit from "~/components/organization-edit/";
+import Organization from "~/models/organization";
+
+mockOrganizationsService();
+
+
+Organization.get(1).then( (organization)=> {
+	const organizationEdit = new OrganizationEdit({
+		viewModel: {
+			organization,
+			onSaved: ()=> {
+				console.log("Saved!")
+			}
+		}
+	})
+	document.body.append(organizationEdit.element)
+});
+
+
+
+</script>
