@@ -70,6 +70,13 @@ const PageShipments = Component.extend({
 			}
 		},
 		connectedCallback(){
+			this.listenTo("_editingShipment", ({value})=>{
+				if(value) {
+					document.body.style.backgroundColor = "blue";
+				} else {
+					document.body.style.backgroundColor = "";
+				}
+			});
 			this.listenTo("editShipmentComponent", ({value, oldValue})=> {
 				if(oldValue) {
 					BitModal.remove(oldValue);
@@ -78,6 +85,14 @@ const PageShipments = Component.extend({
 					BitModal.add(value);
 				}
 			});
+
+			return () => {
+				document.body.style.backgroundColor = "";
+				if(this.editShipmentComponent) {
+					BitModal.remove(this.editShipmentComponent);
+				}
+
+			}
 		}
 	}
 });
