@@ -4,6 +4,7 @@ import Shipment from "~/models/shipment";
 import ShipmentEdit from "~/components/shipment-edit/";
 import BitModal from "~/components/bit-modal/";
 import Organization from "~/models/organization";
+import "./shipments.css";
 
 const formater = new Intl.DateTimeFormat('default', {
 	year: 'numeric', month: 'numeric', day: 'numeric',
