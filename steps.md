@@ -75,8 +75,18 @@ if(include.includes("originOrganization")) {
 
 ### Add demo page to bit-modal
 
-### Add an "isEditing" state and className
+
 
 ## Part 6
+
+### Add some CSS
+
+
+
+### Add an "isEditing" state and className
+
+```
+
+```
 
 ### Wire up the modal
