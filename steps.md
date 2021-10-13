@@ -81,12 +81,40 @@ if(include.includes("originOrganization")) {
 
 ### Add some CSS
 
+Create a `pages/shipments/shipments.css`.
+
+```css
+page-shipments .is-editing {
+  background-color: yellow;
+}
+```
+
+Import it!
 
 
 ### Add an "isEditing" state and className
 
+Add an `is-editing` class if the shipment is being edited.
+
+```html
+<tr class='is-editing'>
 ```
 
+Add state methods and wire them up to buttons:
+
+```js
+_editingShipment: Shipment | null,
+isEditing(org){
+
+},
+edit(shipment){
+
+},
+cancelEdit(){
+
+},
 ```
+
+### Count how many times different shipments have been edited
 
 ### Wire up the modal
