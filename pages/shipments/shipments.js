@@ -72,7 +72,7 @@ const PageShipments = Component.extend({
 		connectedCallback(){
 			this.listenTo("_editingShipment", ({value})=>{
 				if(value) {
-					document.body.style.backgroundColor = "blue";
+					document.body.style.backgroundColor = "#add8e6";
 				} else {
 					document.body.style.backgroundColor = "";
 				}
