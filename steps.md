@@ -85,7 +85,7 @@ Create a `pages/shipments/shipments.css`.
 
 ```css
 page-shipments .is-editing {
-  background-color: yellow;
+  background-color: #ffdf65;
 }
 ```
 
@@ -120,7 +120,7 @@ cancelEdit(){
 When editing:
 
 ```
-document.body.style.backgroundColor = "blue";
+document.body.style.backgroundColor = "#add8e6";
 ```
 
 When not:
