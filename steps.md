@@ -115,6 +115,21 @@ cancelEdit(){
 },
 ```
 
-### Count how many times different shipments have been edited
+### Make the document body blue when editing
+
+When editing:
+
+```
+document.body.style.backgroundColor = "blue";
+```
+
+When not:
+
+```
+document.body.style.backgroundColor = "";
+```
+
+Don't forget to clean up!
+
 
 ### Wire up the modal
