@@ -27,15 +27,14 @@ Filter Origins:
 	</tr>
 	{{ #if(this.shipmentsPromise.isResolved) }}
 		{{# for(shipment of this.shipmentsPromise.value) }}
-			<tr>
+			<tr {{# if( this.isEditing(shipment) )}}class='is-editing'{{/ if }}>
 				<td class='shipment-name'>{{shipment.name}}</td>
 				<td>{{shipment.originOrganization.name}}</td>
-				{{ console.log("org",shipment.originOrganization) }}
 				<td>{{ this.formatDate( shipment.departureDate ) }}</td>
 				<td>{{  shipment.destinationOrganization.name }}</td>
 				<td>{{ this.formatDate( shipment.arrivalDate ) }}</td>
 				<td>
-					<button>Edit</button>
+					<button on:click="this.edit(shipment)">Edit</button>
 					<button on:click="shipment.destroy()" >Delete</button>
 				</td>
 			</tr>
