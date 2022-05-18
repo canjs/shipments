@@ -1,0 +1,85 @@
+@font-bold: 700;
+@font-normal: 400;
+
+.text-2xl {
+	font-size: 25px;
+	line-height: 25px;
+}
+.text-xl {
+	font-size: 20px;
+	line-height: 20px;
+}
+.text-lg {
+	font-size: 16px;
+	line-height: 16px;
+}
+.text-base {
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: @font-normal;
+	font-size: 12px;
+	line-height: 120%;
+}
+
+/* ------ Headings  ------ */
+.text-h1 { /* H1 */
+	font-weight: @font-bold;
+	.text-2xl();
+}
+.text-h2 { /* H2 */
+	font-weight: @font-bold;
+  .text-xl();
+}
+.text-h3 { /* H3 */
+	font-weight: @font-bold;
+	.text-lg();
+}
+.text-h4 { /* H4, shared by Table/Heading, Forms/section name */
+	font-weight: @font-bold;
+  font-size: 14px;
+	line-height: 16.8px;
+}
+.text-h5 { /* H5 */
+	font-weight: @font-bold;
+  font-size: 13px;
+	line-height: 15.6px;
+}
+.text-h6 { /* H6 */
+	font-weight: @font-bold;
+  font-size: 12px;
+	line-height: 14.4px;
+}
+
+/* ------ Forms ------ */
+.forms-section-names {
+	.text-h4();
+}
+/* ------ Tables  ------ */
+
+/* ------ Content  ------ */
+
+.text-link {
+	.text-base();
+	color: @blue500;
+}
+.text-link-hover {
+	.text-base();
+	color: @blue800;
+}
+.text-link-visited {
+	.text-base();
+	color: @blue800;
+}
+.text-link-underlined {
+	.text-link();
+	text-decoration-line: underline;
+}
+a {
+	.text-link();
+}
+a:hover {
+	.text-link-hover();
+}
+a:visited {
+	.text-link-visited();
+}

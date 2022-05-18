@@ -1,0 +1,83 @@
+<div class="modal-content">
+	<ul class="flex-column list-none divide-y-px p-divide-4 p-4">
+		<li class="flex-row gap-4">
+			<div class="avatar-initials-11 bg-red-500">
+				<span class="text-white">SN</span>
+			</div>
+			<div>
+				<div class="flex-row pb-1 w-full justify-between">
+					<div class="messages__content-head-left">
+						<span class="messages__title text-h2 text-dark-grey">Sample #001</span>
+						<span class="messages__status text-sm weight-700">unread</span>
+						<div class="text-h5 text-grey">Samuel Newhouse</div>
+					</div>
+					<div class="messages__content-head-right flex-row gap-sm">
+						<span class="badge-pill-sm text-blue-800 bg-blue-300">Recipients (3/4)</span>
+						<span class="badge-pill-sm text-blue-800 bg-blue-300">Group Name</span>
+						<span class="messages__timestamp text-md">3/11/22 10:00PM JST</span>
+					</div>
+				</div>
+
+				<p class="text-base pb-4 text-dark-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi. Eget tortor semper ante <span class="messages__more-button">read more</span></p>
+
+
+				<div class="messages__content-reply text-lg">
+					Reply...
+					<svg class="messages__content-send-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M0.504286 8.85714L9.5 5L0.504286 1.14286L0.5 4.14286L6.92857 5L0.5 5.85714L0.504286 8.85714Z" fill="#D9D9D9" stroke-width="1"></path></svg>
+				</div>
+			</div>
+		</li>
+		<li class="flex-row gap-4">
+			<div class="messages__avatar">
+				<span class="messages__avatar-text">SN</span>
+			</div>
+			<div class="messages__content flex-column gap-sm">
+				<div class="messages__content-head flex-row">
+					<div class="messages__content-head-left">
+						<span class="messages__title text-h2">Sample #001</span>
+						<span class="messages__status text-sm weight-700">unread</span>
+						<span class="messages__author">Samuel Newhouse</span>
+					</div>
+					<div class="messages__content-head-right flex-row gap-sm">
+						<span class="messages__badge text-md">Recipients (3/4)</span>
+						<span class="messages__badge text-md">Group Name</span>
+						<span class="messages__timestamp text-md">3/11/22 10:00PM JST</span>
+					</div>
+				</div>
+				<div class="messages__content-body flex-column gap-lg">
+					<p class="messages__content-text text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi. Eget tortor semper ante <span class="messages__more-button">more</span></p>
+					<div class="messages__content-reply text-lg">
+						Reply...
+						<svg class="messages__content-send-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M0.504286 8.85714L9.5 5L0.504286 1.14286L0.5 4.14286L6.92857 5L0.5 5.85714L0.504286 8.85714Z" fill="#D9D9D9" stroke-width="1"></path></svg>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="flex-row gap-4">
+			<div class="messages__avatar">
+				<span class="messages__avatar-text">SN</span>
+			</div>
+			<div class="messages__content flex-column gap-sm">
+				<div class="messages__content-head flex-row">
+					<div class="messages__content-head-left">
+						<span class="messages__title text-h2">Sample #001</span>
+						<span class="messages__status text-sm weight-700">unread</span>
+						<span class="messages__author">Samuel Newhouse</span>
+					</div>
+					<div class="messages__content-head-right flex-row gap-sm">
+						<span class="messages__badge text-md">Recipients (3/4)</span>
+						<span class="messages__badge text-md">Group Name</span>
+						<span class="messages__timestamp text-md">3/11/22 10:00PM JST</span>
+					</div>
+				</div>
+				<div class="messages__content-body flex-column gap-lg">
+					<p class="messages__content-text text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi. Eget tortor semper ante <span class="messages__more-button">more</span></p>
+					<div class="messages__content-reply text-lg">
+						Reply...
+						<svg class="messages__content-send-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M0.504286 8.85714L9.5 5L0.504286 1.14286L0.5 4.14286L6.92857 5L0.5 5.85714L0.504286 8.85714Z" fill="#D9D9D9" stroke-width="1"></path></svg>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

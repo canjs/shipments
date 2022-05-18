@@ -1,0 +1,81 @@
+@space-px: 1px;
+@space-2px: 2px;
+@space-1: 0.4rem;
+@space-2: 0.8rem;
+@space-3: 1.2rem;
+@space-4: 1.6rem;
+@space-5: 2.0rem;
+@space-6: 2.4rem;
+@space-7: 2.8rem;
+@space-8: 3.2rem;
+@space-8: 3.6rem;
+@space-9: 4rem;
+@space-10: 4.4rem;
+@space-11: 4.8rem;
+
+@space-xs: @space-1;
+@space-sm: @space-1;
+@space-md: @space-1;
+@space-lg: @space-1;
+
+
+/* ------ Radius  ------ */
+@radius-none: 0px;
+@radius-xs: 1px;
+@radius-sm: 2px;
+@radius-base: 4px;
+@radius-md: 6px;
+@radius-lg: 8px;
+/*TBD*/
+@radius-full: 9999px;
+
+/* ===== Width Helpers ==== */
+.w-11 {
+	width: @space-11;
+}
+.h-11 {
+	height: @space-11;
+}
+
+/* ===== Padding Helpers ==== */
+
+.gap-4 { gap: @space-4; }
+
+/* Adds padding on all sides of an element*/
+.p-4 {
+	padding: @space-4;
+}
+.pb-1 {
+	padding-bottom: @space-1;
+}
+.pb-4 {
+	padding-bottom: @space-4;
+}
+.px-2 {
+	padding-right: @space-2;
+	padding-left: @space-2;
+}
+.py-2px {
+	padding-top: @space-2px;
+	padding-bottom: @space-2px;
+}
+
+.p-divide-4>*~* {
+	padding-top: @space-4;
+	padding-bottom: @space-4;
+}
+.p-divide-4>*:first-child {
+  padding-bottom: @space-4;
+}
+.p-divide-4>*~*:last-child {
+  padding-bottom: 0px;
+}
+.p-divide-4>*:only-child {
+  padding-bottom: 0px;
+}
+
+
+/* ===== Rounding Helpers ==== */
+.rounded-full {
+	border-radius: @radius-full;
+}
