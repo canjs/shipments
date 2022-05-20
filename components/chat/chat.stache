@@ -14,7 +14,7 @@
 						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
 					</div>
 				</div>
-				<div class="text-h5 text-grey">Samuel Newhouse</div>
+				<div class="text-h5 text-grey pb-1">Samuel Newhouse</div>
 				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
 					Eget tortor semper ante <span class="text-blue-500">read more</span>
 				</p>
@@ -35,7 +35,7 @@
 						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
 					</div>
 				</div>
-				<div class="text-h5 text-grey">John Smith</div>
+				<div class="text-h5 text-grey pb-1">John Smith</div>
 				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
 					Eget tortor semper ante <span class="text-blue-500">read more</span>
 				</p>
@@ -56,7 +56,7 @@
 						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
 					</div>
 				</div>
-				<div class="text-h5 text-grey">Jane Fran</div>
+				<div class="text-h5 text-grey pb-1">Jane Fran</div>
 				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
 					Eget tortor semper ante <span class="text-blue-500">read more</span>
 				</p>
