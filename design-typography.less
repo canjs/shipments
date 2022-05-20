@@ -1,27 +1,56 @@
 @font-bold: 700;
 @font-normal: 400;
 
+@font-family-default: 'Arial';
+@font-family-tech: 'Lato', sans-serif;
+
+@font-xl-line-height: 20px;
+@font-base-text-height: 12px;
+@font-base-line-height: 14px;
+
+/* ===== Core Size Helpers ==== */
+.text-7xl {
+	font-size: 72px;
+}
+.text-6xl {
+  font-size: 60px;
+}
+.text-5xl {
+  font-size: 48px;
+}
+.text-4xl {
+  font-size: 36px;
+}
+.text-3xl {
+  font-size: 30px;
+}
 .text-2xl {
-	font-size: 25px;
+	font-size: 24px;
 	line-height: 25px;
 }
 .text-xl {
 	font-size: 20px;
-	line-height: 20px;
+	line-height: @font-xl-line-height;
 }
 .text-lg {
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 18px;
+	line-height: 18px;
 }
 .text-base {
-	font-family: 'Arial';
+	font-family: @font-family-default;
 	font-style: normal;
 	font-weight: @font-normal;
-	font-size: 12px;
-	line-height: 120%;
+	font-size: @font-base-text-height;
+	line-height: @font-base-line-height;
+}
+.text-sm {
+	font-size: 11px;
+}
+.text-xs {
+	font-size: 10px;
 }
 
-/* ------ Headings  ------ */
+/* ===== Headings ==== */
 .text-h1 { /* H1 */
 	font-weight: @font-bold;
 	.text-2xl();
@@ -48,6 +77,18 @@
 	font-weight: @font-bold;
   font-size: 12px;
 	line-height: 14.4px;
+}
+
+/* ===== Font Helpers ==== */
+.font-sans {
+	font-family: @font-family-default;
+}
+.font-tech {
+	font-family: @font-family-tech;
+}
+/* ===== Weight Helpers ==== */
+.font-bold {
+	font-weight: @font-bold;
 }
 
 /* ------ Forms ------ */
