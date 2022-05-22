@@ -1,7 +1,109 @@
+<style>
+	body {margin: 0px;}
+	shipments-chat {
+	  background: white;
+	  width: 855px;
+	  height: 496px;
+	  overflow-y: auto;
+		font-family: arial;
+		border: solid 10px black;
+		position: relative;
+		top: 10px;
+		left: 10px;
+		display: block;
+		box-sizing: content-box;
+		z-index: 100;
+		overflow: hidden;
+	}
+	training-controls {
+		display: block;
+		position: fixed;
+		right: 0px;
+		top: 0px;
+		border: solid grey 2px;
+		padding: 5px;
+	}
+	training-controls p {
+		padding: 2px;
+	}
+	#design {
+		width: 856px;
+		height: 496px;
+		background-image: url('./chat-content.png');
+		box-sizing: content-box;
+    border: solid 20px fuchsia;
+    background-position: left -18px top -18px;
+	}
+</style>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 <script src="../../node_modules/steal/steal.js">
-import "~/shipments.less!";
+import "~/design/system.less!";
 import "~/components/chat/";
+import { StacheElement } from "can";
+
+
+const stateChanges = {
+	hide: {
+		display: "none"
+	},
+	designBelow: {
+		display: "block"
+	},
+	overlayChat: {
+		display: "block",
+		position: "absolute",
+		zIndex: "50",
+		top: 0,
+		bottom: 0
+	},
+	overlayDesign: {
+		display: "block",
+		position: "absolute",
+		zIndex: "500",
+		top: 0,
+		bottom: 0
+	}
+}
+
+class TrainingControls extends StacheElement {
+	static view = `
+		<p><button on:click="this.show('designBelow')">Show Design Below</button></p>
+		<p><button on:click="this.show('hide')">Hide Design</button></p>
+		<p><button on:click="this.show('overlayDesign')">Overlay Design Above</button></p>
+		<p><button on:click="this.show('overlayChat')">Overlay Implementation Above</button></p>
+		<p>Implementation Opacity <input type='range'
+				value="100"
+				on:input="this.setChatOpacity(scope.element.valueAsNumber)"/></p>
+		<p>Design Opacity <input type='range'
+				value="100"
+				on:input="this.setDesignOpacity(scope.element.valueAsNumber)"/></p>
+	`
+	static props = {lastChanges: Object};
+	show(newState){
+		if(this.lastChanges) {
+			for(let prop in this.lastChanges) {
+				design.style[prop] = "";
+			}
+		}
+		for(let prop in stateChanges[newState]) {
+			design.style[prop] = stateChanges[newState][prop];
+		}
+		this.lastChanges = {...stateChanges[newState]};
+	}
+	setChatOpacity(value){
+		chat.style.opacity = value / 100;
+	}
+	setDesignOpacity(value){
+		design.style.opacity = value / 100;
+	}
+}
+customElements.define("training-controls",TrainingControls)
 </script>
 
-<shipments-chat></shipments-chat>
+<shipments-chat id="chat"></shipments-chat>
+
+<div id="design"></div>
+
+
+
+<training-controls></training-controls>

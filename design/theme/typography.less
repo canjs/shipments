@@ -4,9 +4,16 @@
 @font-family-default: 'Arial';
 @font-family-tech: 'Lato', sans-serif;
 
-@font-xl-line-height: 20px;
+@font-xl-line-height: 27px;
+@font-lg-line-height: 24px;
+@font-lg-text-height: 16px;
 @font-base-text-height: 12px;
-@font-base-line-height: 14px;
+@font-base-line-height: 18px;
+
+/* ===== Core weight ==== */
+.font-bold {
+	font-weight: @font-bold;
+}
 
 /* ===== Core Size Helpers ==== */
 .text-7xl {
@@ -25,16 +32,16 @@
   font-size: 30px;
 }
 .text-2xl {
-	font-size: 24px;
-	line-height: 25px;
+	font-size: 22px;
+	line-height: 33px;
 }
 .text-xl {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: @font-xl-line-height;
 }
 .text-lg {
-	font-size: 18px;
-	line-height: 18px;
+	font-size: @font-lg-text-height;
+	line-height: @font-lg-line-height;
 }
 .text-base {
 	font-family: @font-family-default;
@@ -45,6 +52,7 @@
 }
 .text-sm {
 	font-size: 11px;
+	line-height: 150%;
 }
 .text-xs {
 	font-size: 10px;
@@ -52,7 +60,7 @@
 
 /* ===== Headings ==== */
 .text-h1 { /* H1 */
-	font-weight: @font-bold;
+	.font-bold();
 	.text-2xl();
 }
 .text-h2 { /* H2 */
@@ -69,14 +77,21 @@
 	line-height: 16.8px;
 }
 .text-h5 { /* H5 */
-	font-weight: @font-bold;
-  font-size: 13px;
-	line-height: 15.6px;
+	.font-bold();
+	.text-2xl();
 }
 .text-h6 { /* H6 */
 	font-weight: @font-bold;
   font-size: 12px;
 	line-height: 14.4px;
+}
+.text-h-lg {
+	.text-lg();
+	font-weight: @font-bold;
+}
+.text-base-bold {
+	.text-base();
+	.font-bold();
 }
 
 /* ===== Font Helpers ==== */
@@ -85,10 +100,6 @@
 }
 .font-tech {
 	font-family: @font-family-tech;
-}
-/* ===== Weight Helpers ==== */
-.font-bold {
-	font-weight: @font-bold;
 }
 
 /* ------ Forms ------ */

@@ -1,67 +1,74 @@
-<div class="modal-content">
-	<ul class="flex-column list-none divide-y-1px p-divide-3 p-3">
-		<li class="flex-row gap-3">
-			<div class="avatar-initials-11 bg-red-500">
-				<span class="text-white">SN</span>
-			</div>
+<ul class="flex-column list-none divide-y-1px p-divide-3 p-3">
+	<li class="flex-row gap-3">
+		<div class="avatar-initials-10 bg-red-500">
+			<span class="text-white">SA</span>
+		</div>
+		<div>
 			<div>
-				<div>
-					<span class="text-h2 text-dark-grey">Sample #001</span>
-					<span class="bg-yellow-500 badge-square-sm">Unread</span>
-					<div class="float-right flex-row gap-1 pt-h2-height-minus-base-text-minus-2px">
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Recipients (3/4)</span>
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Group Name</span>
-						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
-					</div>
+				<span class="text-h-lg text-dark-grey">Sample #001</span>
+				<span class="bg-yellow-500 badge-square-sm">Unread</span>
+				<div class="float-right flex-row gap-1">
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Recipients (3/4)</span>
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Shipper DEMO</span>
+					<span class="text-grey text-md py-2px">3/11/22 10:00PM EST</span>
 				</div>
-				<div class="text-h5 text-grey pb-1">Samuel Newhouse</div>
-				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
-					Eget tortor semper ante <span class="text-blue-500">read more</span>
-				</p>
-				<div class="form-reply"> Reply... </div>
 			</div>
-		</li>
-		<li class="flex-row gap-3">
-			<div class="avatar-initials-11 bg-green-800">
-				<span class="text-white">JS</span>
-			</div>
+			<div class="text-base-bold text-grey pb-1">Samuel Newhouse</div>
+			<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Netus tempor integer amet purus leo non id.
+				Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius
+				donec adipiscing ac sollicitudin elit risus, morbi.
+				Eget tortor semper ante... <span class="text-blue-500">read more</span>
+			</p>
+			<div class="form-reply"> Reply... </div>
+		</div>
+	</li>
+	<li class="flex-row gap-3">
+		<div class="avatar-initials-10 bg-green-800">
+			<span class="text-white">JS</span>
+		</div>
+		<div>
 			<div>
-				<div>
-					<span class="text-h2 text-dark-grey">Sample #002</span>
-					<span class="bg-yellow-500 badge-square-sm">Unread</span>
-					<div class="float-right flex-row gap-1 pt-h2-height-minus-base-text-minus-2px">
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Recipients (3/4)</span>
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Group Name</span>
-						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
-					</div>
+				<span class="text-h-lg text-dark-grey">Sample #002</span>
+				<span class="bg-yellow-500 badge-square-sm">Unread</span>
+				<div class="float-right flex-row gap-1">
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Recipients (3/4)</span>
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Shipper DEMO</span>
+					<span class="text-grey text-md py-2px">3/11/22 10:00PM EST</span>
 				</div>
-				<div class="text-h5 text-grey pb-1">John Smith</div>
-				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
-					Eget tortor semper ante <span class="text-blue-500">read more</span>
-				</p>
-				<div class="form-reply"> Reply... </div>
 			</div>
-		</li>
-		<li class="flex-row gap-3">
-			<div class="avatar-initials-11 bg-green-800">
-				<span class="text-white">JS</span>
-			</div>
+			<div class="text-base-bold text-grey pb-1">John Smith</div>
+			<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Netus tempor integer amet purus leo non id.
+				Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius
+				donec adipiscing ac sollicitudin elit risus, morbi.
+				Eget tortor semper ante... <span class="text-blue-500">read more</span>
+			</p>
+			<div class="form-reply"> Reply... </div>
+		</div>
+	</li>
+	<li class="flex-row gap-3">
+		<div class="avatar-initials-10 bg-blue-500">
+			<span class="text-white">AJ</span>
+		</div>
+		<div>
 			<div>
-				<div>
-					<span class="text-h2 text-dark-grey">Sample #003</span>
-					<span class="bg-yellow-500 badge-square-sm">Unread</span>
-					<div class="float-right flex-row gap-1 pt-h2-height-minus-base-text-minus-2px">
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Recipients (3/4)</span>
-						<span class="badge-pill-sm text-blue-800 bg-blue-300">Group Name</span>
-						<span class="text-grey text-md py-2px">3/11/22 10:00PM JST</span>
-					</div>
+				<span class="text-h-lg text-dark-grey">Sample #003</span>
+				<span class="bg-yellow-500 badge-square-sm">Unread</span>
+				<div class="float-right flex-row gap-1">
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Recipients (3/4)</span>
+					<span class="badge-pill-base text-blue-800 bg-blue-300">Shipper DEMO</span>
+					<span class="text-grey text-md py-2px">3/11/22 10:00PM EST</span>
 				</div>
-				<div class="text-h5 text-grey pb-1">Jane Fran</div>
-				<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tempor integer amet purus leo non id. Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius donec adipiscing ac sollicitudin elit risus, morbi.
-					Eget tortor semper ante <span class="text-blue-500">read more</span>
-				</p>
-				<div class="form-reply"> Reply... </div>
 			</div>
-		</li>
-	</ul>
-</div>
+			<div class="text-base-bold text-grey pb-1">Adri john</div>
+			<p class="text-base pb-3 text-dark-grey clear-both">Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Netus tempor integer amet purus leo non id.
+				Adipiscing augue amet gravida risus, blandit nulla mattis nec. Nibh varius
+				donec adipiscing ac sollicitudin elit risus, morbi.
+				Eget tortor semper ante... <span class="text-blue-500">read more</span>
+			</p>
+			<div class="form-reply"> Reply... </div>
+		</div>
+	</li>
+</ul>
